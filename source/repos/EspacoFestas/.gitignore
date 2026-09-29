@@ -1,0 +1,14 @@
+# Build (Visual Studio / .NET)
+bin/
+obj/
+.vs/
+*.user
+
+# Banco de dados local (dados de cada máquina, não versionar)
+*.fdb
+
+# Configuração real (tem caminhos/senha de cada máquina) — versionar só config.exemplo.ini
+config.ini
+
+# Outros
+*.log

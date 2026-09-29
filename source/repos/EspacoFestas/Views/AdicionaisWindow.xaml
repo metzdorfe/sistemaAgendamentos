@@ -1,0 +1,40 @@
+<Window x:Class="EspacoFestas.Views.AdicionaisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Adicionais" Height="480" Width="860" WindowStartupLocation="CenterScreen">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Column="0" x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,12,0"
+                  SelectionMode="Single" SelectionChanged="Grid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                <DataGridTextColumn Header="Venda" Binding="{Binding ValorVenda, StringFormat=C2}" Width="90"/>
+                <DataGridTextColumn Header="Custo" Binding="{Binding ValorCusto, StringFormat=C2}" Width="90"/>
+                <DataGridCheckBoxColumn Header="Qtd" Binding="{Binding CobraPorQuantidade}" Width="45"/>
+                <DataGridCheckBoxColumn Header="Ativo" Binding="{Binding Ativo}" Width="50"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Nome"/>
+            <TextBox x:Name="TxtNome" Margin="0,2,0,8"/>
+            <TextBlock Text="Descrição"/>
+            <TextBox x:Name="TxtDescricao" Margin="0,2,0,8"/>
+            <TextBlock Text="Valor de venda (R$)"/>
+            <TextBox x:Name="TxtValorVenda" Margin="0,2,0,8"/>
+            <TextBlock Text="Valor de custo (R$)"/>
+            <TextBox x:Name="TxtValorCusto" Margin="0,2,0,8"/>
+            <CheckBox x:Name="ChkCobraPorQuantidade" Content="Cobra por quantidade" Margin="0,0,0,16"/>
+
+            <Button Content="Novo" Height="32" Margin="0,2" Click="BtnNovo_Click"/>
+            <Button Content="Salvar" Height="32" Margin="0,2" Click="BtnSalvar_Click"/>
+            <Button x:Name="BtnAtivarInativar" Content="Inativar" Height="32" Margin="0,2" Click="BtnAtivarInativar_Click"/>
+
+            <TextBlock x:Name="TxtMensagem" Margin="0,12,0,0" TextWrapping="Wrap" Foreground="DarkRed"/>
+        </StackPanel>
+    </Grid>
+</Window>

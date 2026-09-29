@@ -1,0 +1,19 @@
+<Window x:Class="EspacoFestas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EspacoFestas"
+        mc:Ignorable="d"
+        Title="Espaço de Festas" Height="360" Width="420"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="24" VerticalAlignment="Center">
+        <TextBlock Text="Espaço de Festas" FontSize="22" FontWeight="Bold" Margin="0,0,0,4"/>
+        <TextBlock Text="Telas de teste dos cadastros" Foreground="Gray" Margin="0,0,0,16"/>
+
+        <Button Content="Clientes" Height="36" Margin="0,4" Click="AbrirClientes_Click"/>
+        <Button Content="Serviços e Faixas de Preço" Height="36" Margin="0,4" Click="AbrirServicos_Click"/>
+        <Button Content="Adicionais" Height="36" Margin="0,4" Click="AbrirAdicionais_Click"/>
+        <Button Content="Espécies de Pagamento" Height="36" Margin="0,4" Click="AbrirEspecies_Click"/>
+    </StackPanel>
+</Window>
